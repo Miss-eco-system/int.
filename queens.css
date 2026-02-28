@@ -496,4 +496,154 @@ h4 {
     .queen-photo {
         height: 360px;
     }
+    
+@media (max-width: 900px) {
+    .navbar {
+        position: fixed;
+        top: 150PX;
+        left: 0;
+        width: 20%;
+        padding: 20px;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        z-index: 1000;
+    }
+    .logo {
+        margin-bottom: 10px;
+    }
+    .hamburger-menu {
+        display: block;
+        color: white;
+    }
+
+
+    .hero-text {
+        font-size: 1.2em;
+        padding-top: 8em;
+    }
+    #features {
+        flex-direction: column;
+        padding: 20px;
+    }
+    .in, .st, .trans {
+        width: 90%;
+        margin: 10px auto;
+        font-size: 1.1em;
+        min-width: unset;
+        max-width: unset;
+        height: 220px;
+        padding-top: 30px;
+    }
+}
+@media (max-width: 600px) {
+    /* On small screens make navbar part of the page flow so expanded menu pushes content down */
+    .navbar {
+        position: static;
+        width: 100%;
+        padding: 8px 12px;
+        display: flex;
+        flex-direction: row;
+        justify-content: space-between; /* logo left, toggle right */
+        align-items: center;
+        background-color:rgb(1, 14, 1);
+    }
+
+    /* remove the top padding that compensates for a fixed navbar on larger screens */
+    body > header + section, body > header + div, body > header + main {
+        padding-top: 0;
+    }
+
+
+        /* mobile: animated dropdown for nav links that stays in flow (pushes content) */
+        #nav-links {
+            display: flex;
+            flex-direction: column;
+            position: static;
+            width: 100%;
+            background-color: rgb(2, 44, 2);
+            padding: 0 12px;
+            margin: 0;
+            overflow: hidden;
+            max-height: 0; /* collapsed */
+            opacity: 0;
+            transition: max-height 360ms ease, opacity 220ms ease, padding 200ms ease;
+        }
+        /* expanded state */
+        #nav-links.active {
+            max-height: 420px; /* large enough to show items; adjust if you have many links */
+            opacity: 1;
+            padding: 12px;
+        }
+    #nav-links li {
+        margin: 10px;
+    }
+    
+    .hamburger-menu {
+        font-size: 1.5em;
+
+    }
+    .hero-text {
+        font-size: 1em;
+        padding-top: 6em;
+    }
+    .intro, .mission {
+        padding: 15px;
+        margin: 6px;
+        font-size: 1em;
+    }
+    #features {
+        flex-direction: column;
+        padding: 8px;
+    }
+    .in, .st, .trans {
+        width: 98vw;
+        margin: 8px auto;
+        font-size: 0.9em;
+        height: 140px;
+        padding-top: 10px;
+    }
+ #contact {
+        margin-top: 30px;
+        padding: 10px;
+        font-size: 1em;
+    }
+    #nav-links a {
+        font-size: 1rem;
+        padding-left: 20px;
+        padding-right: 20px;
+        margin-left: 10px;
+        margin-right: 10px;
+        white-space: nowrap;
+    }
+
+    /* mobile: scale down logo and title */
+    .logo img {
+        max-width: 60px;
+    }
+    .logo h1 {
+        font-size: 0.9rem;
+    }
+    /* show hamburger on mobile and place it to the right */
+    .hamburger-menu {
+        display: block;
+        order: 2;
+        margin-left: 8px;
+        color: white;
+        font-size: 1.4rem;
+    }
+    .logo {
+        order: 1;
+    }
+    /* keep nav-links hidden until toggled */
+    #nav-links {
+        display: none;
+    }
+    #nav-links.active {
+        display: flex;
+        flex-direction: column;
+        align-items: flex-start;
+        width: 100%;
+    }
+}
 }
