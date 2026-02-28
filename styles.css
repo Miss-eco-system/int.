@@ -593,6 +593,7 @@ h3 {
     }
 }
 
+
 @media (max-width: 600px) {
     .hero-title {
         font-size: 3.6rem;
@@ -613,7 +614,34 @@ h3 {
     .queens-grid {
         gap: 40px;
     }
+
+    .slides img {
+        width: 150px;
+        height: 150px;
+        object-fit: cover;
+        margin-bottom: 10px;
+        flex-shrink: 0;
+        border-radius: 10px;
+        /* added border radius to images */
+    }
+
+    .image-slider {
+        position: relative;
+        width: 40%;
+        /* changed from 80% to 40% */
+        margin: 0 auto;
+        overflow: hidden;
+        height: 150px;
+
+
+
+    }
+
+    .dots {
+        display: none;
+    }
 }
+
 
 /* ────────────────────────────────────────
    SDG Alignment Visuals & Inline Badges
