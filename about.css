@@ -551,22 +551,20 @@ h4 {
         grid-template-columns: 1fr;
     }
 }
-
 @media (max-width: 600px) {
     .hero-title {
         font-size: 3.5rem;
-    }
-
-    .hero-subtitle {
-        font-size: 1.4rem;
     }
 
     .section-title {
         font-size: 2.8rem;
     }
 
-    .hero-cta {
-        flex-direction: column;
-        gap: 20px;
+    .btn-apply {
+        display: none;
+    }
+
+    .queen-photo {
+        height: 360px;
     }
 }
